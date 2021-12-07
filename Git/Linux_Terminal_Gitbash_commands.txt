@@ -1,4 +1,37 @@
-1. pwd 			- Посмотреть где я
-2. mkdir folder_name 	- создать папку
-3. cd folder_name	- зайти в папку
-4. 
+1. pwd 						- Посмотреть где я
+2. mkdir folder_name 				- создать папку
+3. cd folder_name				- зайти в папку
+4. mkdir folder_1 folder_2 folder_3		- создать 3 папки
+5. cd folder_2
+6. touch {file_1,file_2,file_3}.txt {json_1,json_2}.json	- создать 3 файла txt и 2 файла json
+
+7. mkdir -p git/{folder_1,folder_2,folder_3}	- создать 3 папки в другой папке 
+8. ls 						- вывести список содержимого папки
+9. vim file.txt					- открыть любой txt файл
+10. i 						- переходим в режим редактирования, затем заполняем файл
+11. esc, :wq 					- сохранить и выйти из открытого с помощью vim файла
+12. cd ..					- выйти из папки на уровень выше
+----------
+13. mv file_1.txt file_2.txt folder_name/	- перепестить 2 файла из текущей папки в папку folder_name
+14. cp file_1.txt file_2.txt folder_name/	- перепестить 2 файла из текущей папки в папку folder_name 
+15. find . -name file.txt			- найти файл file.txt 
+16. git grep 'FIXME'				- найти все файлы содержащие FIXME
+
+
+дополнительно
+
+rm {1,2,3}.txt {4,5}.json		- удаление 5 файлос с разными расширениями 
+rm -r {1,2,3} 				- удаление нескольких папок (и их содержимое) в текущей папке
+
+cp {file_1,file_2}.txt {1,2}.json ../ 	- копировать файлы c разнымии расширениями в предыдущую папку
+
+mkdir -p {folder_1,folder_2,folder_3}  	- создать 3 папки
+
+find . -name \*.txt			- найти все txt файлы
+git grep 'FIXME'			- найти все файлы содержащие FIXME
+
+Не проверенные команды
+
+git ls-files '*Test*.java' 		- найти все файлы java содержащие Test в названии
+
+
