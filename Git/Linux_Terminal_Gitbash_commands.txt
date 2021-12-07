@@ -1,0 +1,4 @@
+1. pwd 			- Посмотреть где я
+2. mkdir folder_name 	- создать папку
+3. cd folder_name	- зайти в папку
+4. 
