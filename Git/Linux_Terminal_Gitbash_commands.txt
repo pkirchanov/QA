@@ -42,4 +42,7 @@ git grep 'FIXME'			- найти все файлы содержащие FIXME
 
 git ls-files '*Test*.java' 		- найти все файлы java содержащие Test в названии
 
+mv bug_report ./but_report.json		- переименовать файл и оставить в той же папке
+
+
 
