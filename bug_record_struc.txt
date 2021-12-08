@@ -1,0 +1,19 @@
+Bug title
+Build number
+Environment
+Severity
+Priority
+Assigned to
+Reported by
+Type
+Status
+Description
+Steps to reproduce:
+ 1) 
+ 2) 
+ 3) 
+ 4) 
+Actual result 
+
+Expected result
+Attachment
