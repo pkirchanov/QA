@@ -1,0 +1,104 @@
+ 4. Создать внешний репозиторий c названием JSON
+
+Заходим на https://github.com/pkirchanov?tab=repositories  на жимаем new - создаем новый репозиторий
+
+ 5. Клонировать репозиторий JSON на локальный компьютер 	- git clone git@github.com:pkirchanov/JSON.git
+ 6. Внутри локального JSON создать файл “new.json”.		- touch new.json
+ 7. Добавить файл под гит.					- git add .
+ 8. Закоммитить файл.						- git commit -m "new.json"
+ 9. Отправить файл на внешний GitHub репозиторий.		- git push
+ 10. Отредактировать содержание файла “new.json” - 
+написать информацию о себе (ФИО, возраст, 
+количество домашних животных, будущая желаемая зарплата). 
+Всё написать в формате JSON.					- vim new.json
+								- i
+{
+	"surname": "Kirchanov",
+	"name": "Pavel",
+	"middlename": "Nikolaevich",
+	"age": 40,
+	"Pets": 0,
+	"Salary": "1000 USD",	 
+}								esc :wq
+
+ 11. Отправить изменения на внешний репозиторий.		- git add . 	- git commit -m "filled new.json"	- git push
+ 12. Создать файл preferences.json				- touch preferences.json				
+ 13. В файл preferences.json добавить информацию о своих 
+предпочтениях (Любимый фильм, любимый сериал, любимая еда, 
+любимое время года, сторона которую хотели бы посетить) 
+в формате JSON.							- vim preferences.json				
+								- i
+{
+	"Favorite movie": "A Dog's Purpose",
+	"Favorite series": "Game of Thrones",
+	"Favorite food": "Khachapuri",
+	"Favorite season": "Summer",
+	"Country i would like to visit": "China"
+}								esc :wq
+
+ 14. Создать файл sklls.json добавить информацию о скиллах 
+которые будут изучены на курсе в формате JSON			- touch skills.json
+								- i
+{
+	"skills" : [
+		"HTTP codes",
+		"JSON,XML formats",
+		"API testing using Postman",
+		"logs reading",
+		"http web traffic sniffing",
+		"Dev Tools",
+		"VPN",
+		"Mobile testing",
+		"Andrioid and guidelines",
+		"apps building using xcode",
+		"ADB",
+		"VPN and Proxy",
+		"Charles and Fiddler mobile traffic sniffing",
+		"Linux terminal",
+		"SQL",
+		"Postrgres",
+		"Redis",
+		"Jmeter",
+		"Scrum methodology",
+		"Python"
+	]
+}
+				
+									- esc :wq
+ 15. Отправить сразу 2 файла на внешний репозиторий.			- git add . 	- git commit -am "add preferences.json and skills.json"	- git push
+ 16. На веб интерфейсе создать файл bug_report.json.			- https://github.com/pkirchanov/JSON/new/main
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 	- кнопка Commit new file
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, 
+добавить баг репорт в формате JSON.					- Редактировать файл
+
+{
+    "Bug title" : "Application crash on clicking the SAVE button while creating a new user.",
+    "Bug Id" : 1,
+    "Build number" : "Version 1.0",
+    "Environment" : "Windows 10, Chrome 96.0.4664.93",
+    "Severity" : "S1 Blocker",
+    "Priority" : "P1 High",
+    "Assigned to" : "Middle Developer",
+    "Reported by" : "Pavel Kirchanov",
+    "Type" : "Bug",
+    "Status" : "Open",
+    "Description" : "Application crash on clicking the SAVE button while creating a new user, hence unable to create a new user in the app.",
+    "Steps to reproduce" : [
+      "1) Logon into the application",
+      "2) Navigate to the Users Menu > New User",
+      "3) Filled all the user informations fields",
+      "4) Clicked on the SAVE button",
+      "5) Seen an error page 'ORA1090 Exception:Insert values Error..' ",
+      "6) See the attached logs for more information (Attach more logs telated to bug..IF any)",
+      "7) And also see the attached screenshot of the error page."
+    ],
+    "Expected result" : "On clicking SAVE button, should be prompted to a success message 'New User has been successfully' ",
+    "Actual result" : "Application crashes after clicking the SAVE button while creating new user",
+    "Attachment" : "Attach 'application crash' screenshot.. If any"
+} 
+
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 	- Кнопка Commit changes
+ 20. Синхронизировать внешний и локальный репозиторий JSON		- git fetch
+									- git pull
+
