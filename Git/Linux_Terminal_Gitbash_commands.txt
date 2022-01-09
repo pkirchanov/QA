@@ -12,8 +12,8 @@
 11. esc, :wq 					- сохранить и выйти из открытого с помощью vim файла
 12. cd ..					- выйти из папки на уровень выше
 ----------
-13. mv file_1.txt file_2.txt folder_name/	- перепестить 2 файла из текущей папки в папку folder_name
-14. cp file_1.txt file_2.txt folder_name/	- перепестить 2 файла из текущей папки в папку folder_name 
+13. mv file_1.txt file_2.txt folder_name/	- переместить 2 файла из текущей папки в папку folder_name
+14. cp file_1.txt file_2.txt folder_name/	- переместить 2 файла из текущей папки в папку folder_name 
 15. find . -name file.txt			- найти файл file.txt 
 16. tail -f file.txt | grep error		- вывести все строки из файла в реальном времени содержащие слово error
 17. head -n7 file.txt				- выводит первые 7 строк из файла на экран
