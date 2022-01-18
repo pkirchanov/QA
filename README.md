@@ -1,1 +1,1 @@
-# QA-study
+# QA
