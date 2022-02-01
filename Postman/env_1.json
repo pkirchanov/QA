@@ -1,0 +1,34 @@
+{
+	"id": "ad7285dc-2308-417a-8827-4c4727eee134",
+	"name": "Group_25",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://162.55.220.72:5005",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "age",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "name",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "salary",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-02-01T11:56:29.295Z",
+	"_postman_exported_using": "Postman/7.36.6"
+}

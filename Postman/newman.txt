@@ -1,0 +1,11 @@
+1. Запуск тестов по ссылке
+
+newman run https://www.getpostman.com/collections/7b46d9471c1702058dba
+
+2. Запуск тестов по ссылке с окружением в env_1.json
+
+newman run https://www.getpostman.com/collections/7b46d9471c1702058dba -e env_1.json
+
+3. Запуск тестов с файла
+
+newman run C:/data/QA/Postman/02.postman_collection.json -e env_1.json
