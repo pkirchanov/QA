@@ -32,12 +32,6 @@
           </location>
           <enabled>true</enabled>
         </locationMatch>
-        <locationMatch>
-          <location>
-            <host>[]</host>
-          </location>
-          <enabled>true</enabled>
-        </locationMatch>
       </locationPatterns>
     </sslLocations>
     <sslExcludeLocations>
@@ -163,8 +157,8 @@
       <width>1079</width>
       <height>700</height>
     </mainWindow>
-    <currentDirectory>C:\Users\mercu\Desktop</currentDirectory>
-    <lastCheckUpdates>2022-01-20 13:42:57.854 UTC</lastCheckUpdates>
+    <currentDirectory>C:\data\QA</currentDirectory>
+    <lastCheckUpdates>2022-01-31 15:45:22.298 UTC</lastCheckUpdates>
   </startupConfiguration>
   <userInterfaceConfiguration>
     <promptToSaveSessions>false</promptToSaveSessions>
@@ -189,6 +183,10 @@
     <properties>
       <entry>
         <string>URLEncodedQueryViewer.TABLE_COLUMN_STATES</string>
+        <columnStates/>
+      </entry>
+      <entry>
+        <string>URLEncodedBodyViewer.TABLE_COLUMN_STATES</string>
         <columnStates/>
       </entry>
       <entry>
@@ -282,7 +280,7 @@
                 <path>/object_info_1</path>
               </location>
               <scheme>GET</scheme>
-              <request>false</request>
+              <request>true</request>
               <response>true</response>
               <enabled>true</enabled>
             </breakpoint>
@@ -336,18 +334,50 @@
         <string>Block List</string>
         <blacklist>
           <locations>
-            <locationPatterns/>
+            <locationPatterns>
+              <locationMatch>
+                <location>
+                  <protocol>https</protocol>
+                  <host>yandex.ru</host>
+                  <path>/</path>
+                </location>
+                <enabled>true</enabled>
+              </locationMatch>
+              <locationMatch>
+                <location>
+                  <protocol>https</protocol>
+                  <host>www.google.com</host>
+                  <path>/</path>
+                </location>
+                <enabled>true</enabled>
+              </locationMatch>
+            </locationPatterns>
           </locations>
           <toolEnabled>false</toolEnabled>
           <useSelectedLocations>false</useSelectedLocations>
-          <action>0</action>
+          <action>1</action>
         </blacklist>
       </entry>
       <entry>
         <string>Map Remote</string>
         <map>
           <toolEnabled>false</toolEnabled>
-          <mappings/>
+          <mappings>
+            <mapMapping>
+              <sourceLocation>
+                <protocol>https</protocol>
+                <host>www.google.com</host>
+                <path>/</path>
+              </sourceLocation>
+              <destLocation>
+                <protocol>https</protocol>
+                <host>yandex.ru</host>
+                <path>/</path>
+              </destLocation>
+              <preserveHostHeader>false</preserveHostHeader>
+              <enabled>true</enabled>
+            </mapMapping>
+          </mappings>
         </map>
       </entry>
       <entry>
@@ -367,7 +397,7 @@
       <entry>
         <string>Rewrite</string>
         <rewrite>
-          <toolEnabled>true</toolEnabled>
+          <toolEnabled>false</toolEnabled>
           <debugging>false</debugging>
           <sets>
             <rewriteSet>
@@ -692,7 +722,85 @@
         <string>Map Local</string>
         <mapLocal>
           <toolEnabled>false</toolEnabled>
-          <mappings/>
+          <mappings>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/get_method</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\get_method%3fname%3dPavel%26age%3d40</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/user_info_3</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\user_info_3</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/object_info_1</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\object_info_1%3fname%3dPavel%26age%3d40%26weight%3d72</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/object_info_2</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\object_info_2%3fname%3dPavel%26age%3d40%26salary%3d1000</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/object_info_3</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\object_info_3%3fname%3dPavel%26age%3d40%26salary%3d1000</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/object_info_4</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\object_info_4%3fname%3dPavel%26age%3d40%26salary%3d1000</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+            <mapLocalMapping>
+              <sourceLocation>
+                <protocol>http</protocol>
+                <host>162.55.220.72</host>
+                <port>5005</port>
+                <path>/user_info_2</path>
+              </sourceLocation>
+              <dest>c:\data\download\162.55.220.72_5005\user_info_2</dest>
+              <enabled>true</enabled>
+              <caseSensitive>true</caseSensitive>
+            </mapLocalMapping>
+          </mappings>
         </mapLocal>
       </entry>
       <entry>
@@ -737,10 +845,20 @@
         <string>Mirror</string>
         <mirror>
           <locations>
-            <locationPatterns/>
+            <locationPatterns>
+              <locationMatch>
+                <location>
+                  <protocol>http</protocol>
+                  <host>162.55.220.72</host>
+                  <port>5005</port>
+                </location>
+                <enabled>true</enabled>
+              </locationMatch>
+            </locationPatterns>
           </locations>
           <toolEnabled>false</toolEnabled>
-          <useSelectedLocations>false</useSelectedLocations>
+          <useSelectedLocations>true</useSelectedLocations>
+          <savePath>c:\data\download\</savePath>
         </mirror>
       </entry>
       <entry>
