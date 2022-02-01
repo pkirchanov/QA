@@ -1,0 +1,711 @@
+{
+  "id": "61e36432-edf9-478e-8172-738559af3d2f",
+  "version": "2.0",
+  "name": "Li - JS while",
+  "url": "https://litecart.stqa.ru",
+  "tests": [{
+    "id": "c5fc5313-d016-41df-ab57-b1c09dc1fa6f",
+    "name": "cart - set speed",
+    "commands": [{
+      "id": "dfa1c403-5f08-45cd-99ba-5d302b357a67",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5f94722-1d0d-4f4d-912e-26c0d34c103b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7198fe8-4784-40aa-ab2d-f1ba89de8832",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[@alt='Green DucK']",
+      "targets": [
+        ["css=#box-most-popular .product:nth-child(3) .image", "css:finder"],
+        ["xpath=//img[@alt='Green DucK']", "xpath:img"],
+        ["xpath=//div[@id='box-most-popular']/div/ul/li[3]/a/div/img", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e8fabe1-dab0-47b4-adf4-67fe789e89e0",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52aa0f26-6997-4b1b-a6bb-f7be63c75b24",
+      "comment": "",
+      "command": "click",
+      "target": "name=add_cart_product",
+      "targets": [
+        ["name=add_cart_product", "name"],
+        ["css=button:nth-child(4)", "css:finder"],
+        ["xpath=//button[@name='add_cart_product']", "xpath:attributes"],
+        ["xpath=//div[@id='box-product']/div[2]/div[2]/div[5]/form/table/tbody/tr/td/button", "xpath:idRelative"],
+        ["xpath=//td/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59ea86ba-e2af-4923-bb3b-51cbe63d2ff0",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e21ff5cc-9fcc-4fbe-ad14-b54c91a48cf1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.content > strong",
+      "targets": [
+        ["css=.content > strong", "css:finder"],
+        ["xpath=//div[@id='cart']/a[2]/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Cart:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3941b7fa-1411-42a7-a40d-e2c49e25e291",
+      "comment": "",
+      "command": "click",
+      "target": "name=remove_cart_item",
+      "targets": [
+        ["name=remove_cart_item", "name"],
+        ["css=p:nth-child(4) > button", "css:finder"],
+        ["xpath=//button[@name='remove_cart_item']", "xpath:attributes"],
+        ["xpath=//div[@id='box-checkout-cart']/div/ul/li/form/div/p[4]/button", "xpath:idRelative"],
+        ["xpath=//p[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5bc8c8e-ebcd-4ada-8362-2d932b0f2535",
+      "comment": "",
+      "command": "click",
+      "target": "css=.general-0 > a",
+      "targets": [
+        ["css=.general-0 > a", "css:finder"],
+        ["xpath=//nav[@id='site-menu']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://litecart.stqa.ru/en/')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a0748bd0-3e51-4dc9-92a5-441066bcbe66",
+    "name": "search duck",
+    "commands": [{
+      "id": "b315312f-7d78-43f8-b824-6d7d27612205",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8eba557-fffb-48f9-ba27-d2c876869af3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5fbfb5e-e2cd-45c7-aa32-29d8e8d9c682",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8035826-9c83-4367-b163-7bb496ff349b",
+      "comment": "Store сохраняет переменную в виде строки, в том числе цифры",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c0ef6c6-b15e-4fd7-89f4-1ab554ee49e1",
+      "comment": "",
+      "command": "store",
+      "target": "duck",
+      "targets": [],
+      "value": "query"
+    }, {
+      "id": "fac3fba2-c21c-48ab-ab23-a44bd6fb32f1",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${query}"
+    }, {
+      "id": "fa21a2db-bdf8-4a0f-800d-86548b0955dd",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7cb37f56-9e99-41ad-9f66-e18b55aa3e6f",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@id='box-search-results']/div/ul/li/a[@class='link']",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "220364a8-1414-4c8f-a2cb-e559cd687f80",
+      "comment": "",
+      "command": "assert",
+      "target": "count",
+      "targets": [],
+      "value": "5"
+    }, {
+      "id": "afcef04c-aea4-42cb-811a-e8e22fb42723",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=ul.products li.product:nth-child(5)",
+      "targets": [
+        ["css=.product:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='box-search-results']/div/ul/li", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38ab7cef-8df4-4be6-ae62-3a94b34908a0",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=ul.products li.product:nth-child(6)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab627904-fcff-4641-b326-18cf0453bca5",
+      "comment": "Поиск по частичному совпадению, поэтому assert text не подходит",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60c8a890-21f6-4065-93ab-8aa5561d2eeb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//h1[contains(.,'Results for \"${query}\"')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1741e366-5a9e-4686-ada1-41d3010f9e60",
+      "comment": "Текст в поле ввода - это атрибут value",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3483265f-7797-4e3f-8d14-57f62ec21018",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=query",
+      "targets": [],
+      "value": "${query}"
+    }, {
+      "id": "db69f73a-f2e4-4368-add2-f2128c4d654f",
+      "comment": "Store сохраняет переменную в виде строки, в том числе цифры, поэтому используем return",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53e19770-e622-4693-9e4e-5ac24347c9e0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "74bc93e2-8baf-4640-a173-ce3154e357ec",
+      "comment": "Создаем цикл",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f48dc27c-239d-42c8-8201-ca392b825a52",
+      "comment": "",
+      "command": "while",
+      "target": "${counter} < 6",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7677b4a8-fafa-40cd-91bd-278eda6beac2",
+      "comment": "",
+      "command": "echo",
+      "target": "${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc2ccdff-e90e-442b-bcea-ab013a4a6633",
+      "comment": "Помещаем первый найденный товар в переменную name",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79d64583-126b-4079-8bae-b5a1dfb0f1e1",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.product:nth-child(${counter}) .name",
+      "targets": [
+        ["css=.product:nth-child(1) .name", "css:finder"],
+        ["xpath=//div[@id='box-search-results']/div/ul/li/a/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": "name"
+    }, {
+      "id": "94c821e2-aacb-4167-a027-f1f686492fa1",
+      "comment": "Команды echo показывают содержимое переменных, чтобы понять, где ошибка - строчные и заглавные буквы в слове duck",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8fd8b24-88b5-40a1-8abf-a79d7c92dcbb",
+      "comment": "",
+      "command": "//echo",
+      "target": "${query}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "186c31c0-71f6-4b4e-8453-16e07aacf671",
+      "comment": "",
+      "command": "//echo",
+      "target": "${name}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "879c267e-1895-4b19-b23b-59cd4b6378ca",
+      "comment": "Проверяем что переменная name включает в себя слово из запроса query. Добавляем к переменным команду  toLowerCase(), чтобы перевести их в нижний регистр",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6475983c-060b-4b1c-b46a-26e4b207a004",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${name}.toLowerCase().includes(${query}.toLowerCase())",
+      "targets": [],
+      "value": "contains"
+    }, {
+      "id": "b236e51b-0f97-447f-af73-df082f399f89",
+      "comment": "Проверяем значение переменной - true или false",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f62d351e-76b0-4a00-9607-d6cbf65c8785",
+      "comment": "",
+      "command": "assert",
+      "target": "contains",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "56e3a67a-1f42-412b-aeb0-3a58ef6fbaa0",
+      "comment": "Счетчик",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5260c4f4-d5c0-4012-ac08-04298231ad0b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter} + 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "96ac9bcc-d21d-4db8-a95b-c4946c66757d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ad1cf36a-d7ce-4ee6-b76c-d889773cd1b8",
+    "name": "search fish",
+    "commands": [{
+      "id": "0ac148ba-6625-4543-be44-e27781eed6e7",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b24b742-1334-49e2-ad74-376a956510c8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3afcec8-30f0-4f12-9fa0-099581eabe62",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "603832ed-2c67-4888-8162-5d8ad8a987ea",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fish"
+    }, {
+      "id": "98227754-f159-4ed0-81c0-e75f43249135",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.input-wrapper > input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='box-search']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "eacdeeff-c5ec-444e-b610-43706f8f9fdf",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=ul.products li.product",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b65efd95-e50a-49ae-865e-6e15f060d14d",
+    "name": "cart - wait",
+    "commands": [{
+      "id": "46d90ba8-ec9f-4770-90d9-e58f2a97db83",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "925c919b-42d1-4160-a1c0-b4e794d3ca98",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0c5eec6-7540-4979-931f-4c87932517d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#box-most-popular .product .image",
+      "targets": [
+        ["css=#box-most-popular .product:nth-child(3) .image", "css:finder"],
+        ["xpath=//img[@alt='Green DucK']", "xpath:img"],
+        ["xpath=//div[@id='box-most-popular']/div/ul/li[3]/a/div/img", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0fa9ebf-706d-41ae-a134-a87ef4eef6af",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//select[@name='options[Size]']",
+      "targets": [],
+      "value": "dropdowns"
+    }, {
+      "id": "edb2b6aa-e120-4dd5-8709-2b0a58421e8a",
+      "comment": "",
+      "command": "if",
+      "target": "${dropdowns} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c4ec322-071a-4548-927b-2f32b202d23d",
+      "comment": "",
+      "command": "click",
+      "target": "name=options[Size]",
+      "targets": [
+        ["name=options[Size]", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='options[Size]']", "xpath:attributes"],
+        ["xpath=//div[@id='box-product']/div[2]/div[2]/div[5]/form/table/tbody/tr/td/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "346fa499-0ef2-4824-ad34-143046c00105",
+      "comment": "",
+      "command": "select",
+      "target": "name=options[Size]",
+      "targets": [],
+      "value": "label=Small"
+    }, {
+      "id": "60651feb-065c-4d2d-89d3-1ee6ad0fcb53",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6fefd7f-44a3-4699-a194-513e8d276b84",
+      "comment": "Получаем случайное число от 0 до 9 и прибавляем 1",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01d005ec-7fec-4229-84bf-f257ff241ae8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() *10) +1",
+      "targets": [],
+      "value": "quantity"
+    }, {
+      "id": "46ab0e96-df7d-4602-83f6-d8151369d9c2",
+      "comment": "type заменяет текс. ",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17f5a201-f920-43f8-bdb4-7d6c14a027ac",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantity",
+      "targets": [],
+      "value": "${quantity}"
+    }, {
+      "id": "1962ac5b-4524-44d3-8dce-5a42da297ac7",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@id='box-product']//strong[@class='campaign-price']",
+      "targets": [],
+      "value": "actions"
+    }, {
+      "id": "9ce1dbf8-cf08-4da1-8091-2cf87d6e7104",
+      "comment": "",
+      "command": "if",
+      "target": "${actions} > 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a02b4d1-6649-47bb-b21f-2bf1ebf32445",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.campaign-price",
+      "targets": [
+        ["css=.campaign-price", "css:finder"],
+        ["xpath=//div[@id='box-product']/div[2]/div[2]/div[2]/strong", "xpath:idRelative"],
+        ["xpath=//div[2]/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'$18')]", "xpath:innerText"]
+      ],
+      "value": "price"
+    }, {
+      "id": "a5d3755c-f30a-4800-8cfa-5cd54f0470e5",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1ff5058-08f8-4b78-818a-589e7ceab8af",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=span.price",
+      "targets": [],
+      "value": "price"
+    }, {
+      "id": "300d3abc-1c79-4c75-9818-d3ab051bd46b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc763874-7ad3-47cc-a58e-e7d048497fa2",
+      "comment": "",
+      "command": "click",
+      "target": "name=add_cart_product",
+      "targets": [
+        ["name=add_cart_product", "name"],
+        ["css=button:nth-child(4)", "css:finder"],
+        ["xpath=//button[@name='add_cart_product']", "xpath:attributes"],
+        ["xpath=//div[@id='box-product']/div[2]/div[2]/div[5]/form/table/tbody/tr/td/button", "xpath:idRelative"],
+        ["xpath=//td/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d08f18f3-1686-405b-9e36-84b638a48404",
+      "comment": "value - 10000 м/с на случай если что-то пошло не так",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06f71334-a818-4deb-a5d1-de3f9a6219e0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[@id='cart']//span[@class='quantity'][.='${quantity}']",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "ba75086d-bdab-4ef3-88e4-feb6c3c6eee7",
+      "comment": "Выводит значение переменной в логи",
+      "command": "//echo",
+      "target": "${price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fea67e2-065f-4142-8875-b4dd5c4ca401",
+      "comment": "${price}.substring(1) - обрезает первый знак у $20 в переменной price",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5914f24-8a5e-41c0-8bfe-dca3da6f6a9e",
+      "comment": "Store сохраняет переменную в виде строки, в том числе числа, но при вычислении JS переводит их в числа",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7a14c70-a729-4db6-921e-961dd707350e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${quantity}*${price}.substring(1)",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "d5c0ff1e-e7ce-4a3e-85a2-9cd7c637a233",
+      "comment": "Добавляем знак $ перед переменной",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf12464d-bbb1-4da3-85fe-c4693571681c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=a.content",
+      "targets": [
+        ["css=#cart > .content", "css:finder"],
+        ["xpath=//div[@id='cart']/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://litecart.stqa.ru/en/checkout')])[2]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": "Cart:\\n${quantity} item(s) - $${total}"
+    }, {
+      "id": "4126d180-09a6-43d2-958b-c2c8d7721038",
+      "comment": "",
+      "command": "click",
+      "target": "css=.content > strong",
+      "targets": [
+        ["css=.content > strong", "css:finder"],
+        ["xpath=//div[@id='cart']/a[2]/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Cart:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d9ce164-4346-469b-b547-c6c1662614f4",
+      "comment": "",
+      "command": "click",
+      "target": "name=remove_cart_item",
+      "targets": [
+        ["name=remove_cart_item", "name"],
+        ["css=p:nth-child(4) > button", "css:finder"],
+        ["xpath=//button[@name='remove_cart_item']", "xpath:attributes"],
+        ["xpath=//div[@id='box-checkout-cart']/div/ul/li/form/div/p[4]/button", "xpath:idRelative"],
+        ["xpath=//p[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8ee9e7e-b08d-4fde-aa86-ebbf4cf1ba76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.general-0 > a",
+      "targets": [
+        ["css=.general-0 > a", "css:finder"],
+        ["xpath=//nav[@id='site-menu']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://litecart.stqa.ru/en/')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "192e25cb-7787-4226-a247-022c64444863",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c5fc5313-d016-41df-ab57-b1c09dc1fa6f"]
+  }, {
+    "id": "d8701fc5-45ee-469c-a891-2df59fc93173",
+    "name": "Positive",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a0748bd0-3e51-4dc9-92a5-441066bcbe66", "c5fc5313-d016-41df-ab57-b1c09dc1fa6f"]
+  }, {
+    "id": "0069f6c8-1955-4b98-ab75-c765927a88b8",
+    "name": "Negative",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ad1cf36a-d7ce-4ee6-b76c-d889773cd1b8"]
+  }, {
+    "id": "005ee490-3109-4bb3-a9a0-2399227d62be",
+    "name": "Search",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a0748bd0-3e51-4dc9-92a5-441066bcbe66", "ad1cf36a-d7ce-4ee6-b76c-d889773cd1b8"]
+  }],
+  "urls": ["https://litecart.stqa.ru/"],
+  "plugins": []
+}
