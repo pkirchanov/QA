@@ -1,0 +1,84 @@
+====== Три типа хранилица данных которые можно подключать к контейнеру =======
+
+docker container --help
+docker image --help
+docker volume --help
+
+bind		- подключение директории хост-машины к контейнеру, для обмена информацией между конт и хостом
+volume		- способ создать отдельный том для поключения к любому из контейнеров, для обмена информацией между конт
+tmpfs		- временное файловое хранилище в юникс лайк ос - в тестировании почти не используется.
+
+ls dir_for_bind 	- смотрим директорию на хосте
+
+===
+
+type 		- тип подключения bind, volume или tmpfs
+src		- источник подключения (путь) можно узнать командой pwd
+target		- путь внутри контейнера куда том будет подключен - внутри тома будет создана папка bind к которой подключится контейнер
+read only	- позволяет только читать из привязанной директории, контейнер может получать данные, но нельзя записывать
+
+ls bind		- смотрим содержимое папки bind
+
+docker run -it --mount type=bind,src=C:/dir_for_bind,target=/bind/ ubuntu bash
+
+ls bind 	- посмотреть содержимое созданной папки bind (оно такое же как и у реально папки dir_for_bind)
+
+сat bind/file_name.txt		- открыть содержимое файла
+
+--------------------------------------------------------
+
+docker volume 				- подсказка
+
+docker volume create volume_name	- создать том с уникальным именем
+
+docker volume ls			- список всех томов на компе - в поле драйвер написано local если клиент и демон на одной машине
+
+docker run -it --mount type=volume,src=volume_name,target=/volume/ ubuntu bash		- запуск тома
+
+touch volume/file.txt			- создание файла внутри тома
+ls volume 				- посмотреть содержимое тома
+exit 					- выход из контейнера с сохранением тома
+					если подключить другой контейнер к volume то можно увидеть все содержимое
+
+
+docker volume rm volume_name		- удаление тома, который не подключен к контейнеру
+
+docker volume prune			- удаляет все тома, которые не используются
+
+------------------------------------------------------------------
+
+docker pull python 			- скачать образ питона
+
+docker run --rm --mount type=bind,src=C:\python_project\,target=/bind/,readonly python python /bind/counter.py
+
+				python				- образ
+				python /bind/counter.py		- команда, которая запускает программу
+
+docker run -it --rm --mount type=volume,src=python_program,target=/volume/ ubunte bash 	- запускаем том, который автоматически создается
+
+cd volume			- переходим в созданную папку внутри контейнера
+
+echo "for i in range(1, 6): print(i)" > counter.py		- пишем код на питоне и выносим его в файл counter.py
+
+cat counter.py 			- проверяем содержимое созданного файла
+
+exit
+
+docker run --rm --mount type=volume,src=python_program,target=/src/,readonly python python /src/counter.py
+
+				- запускаем программу внутри тома.
+
+
+
+docker run --rm --mount type=bind,src=C:\python_project,target=/src/,readonly python python /src/test_version.py
+
+docker pull python:3.5 		- скачиваем питон нужной версии
+				
+				- запускаем версию питона с тэгом 3.5				
+
+docker run --rm --mount type=bind,src=C:\python_project,target=/src/,readonly python:3.5 python /src/test_version.py
+
+Если у кода будет другой синтаксис, то код на другой версии не запуститься.
+
+
+
